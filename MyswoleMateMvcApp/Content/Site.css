@@ -140,6 +140,7 @@ header .intro-text .skills {
     }
 }
 
+/*
 @media(min-width:768px) {
     .navbar-fixed-top {
         padding: 25px 0;
@@ -186,7 +187,12 @@ header .intro-text .skills {
 .navbar-inverse {
     border: 0;
 }
-
+*/
+.navbar {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
 section {
     padding: 100px 0;
 }
@@ -499,4 +505,11 @@ footer {
         font-size: 75px;
         text-align: center;
     }
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 2px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
 }
