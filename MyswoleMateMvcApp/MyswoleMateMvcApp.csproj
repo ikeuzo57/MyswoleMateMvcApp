@@ -126,10 +126,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TraineeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Trainee.cs" />
     <Compile Include="Models\TraineeViewModel.cs" />
     <Compile Include="MySwoleMateDAL\TraineeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,10 +168,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\TraineeList.cshtml" />
+    <Content Include="Views\Trainee\About.cshtml" />
+    <Content Include="Views\Trainee\Contact.cshtml" />
+    <Content Include="Views\Trainee\Index.cshtml" />
+    <Content Include="Views\Trainee\CreateNewTrainee.cshtml" />
+    <Content Include="Views\Trainee\TraineeList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -8,13 +8,10 @@
 <h2>TraineeList</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Trainee", "CreateNewTrainee")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TraineeID)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
@@ -24,15 +21,11 @@
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Height)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Weight)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CellNbr)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Gender)
         </th>
@@ -56,9 +49,7 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TraineeID)
-        </td>
+       
         <td>
             @Html.DisplayFor(modelItem => item.FirstName)
         </td>
@@ -68,14 +59,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Email)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Height)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Weight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CellNbr)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Gender)

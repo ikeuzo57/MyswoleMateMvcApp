@@ -1,6 +1,7 @@
 ﻿using MyswoleMateMvcApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -13,10 +14,31 @@ namespace MyswoleMateMvcApp.MySwoleMateDAL
         //uses connection string for connecting to database
        
         string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MySwoleMateConnectionString"].ConnectionString;
-        public TraineeDAL()
+        
+
+        public int AddTraineeInfo(Trainee trainee)
         {
-         
+            {
+                string sqlQuery = "INSERT into Trainee (FirstName, LastName, Email, Height, " +
+                    "Weight, CellNbr, Gender, Age) VALUES (@FirstName, @LastName, @Email, @Height, " +
+                    "@Weight, @CellNbr, @Gender, @Age)";
+                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(sqlQuery, con))
+                {
+                    con.Open();
+                    cmd.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = trainee.FirstName;
+                    cmd.Parameters.Add("@LastName", SqlDbType.VarChar).Value = trainee.LastName;
+                    cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = trainee.Email;
+                    cmd.Parameters.Add("@Height", SqlDbType.Int).Value = trainee.Height;
+                    cmd.Parameters.Add("@Weight", SqlDbType.Int).Value = trainee.Weight;
+                    cmd.Parameters.Add("@CellNbr", SqlDbType.VarChar).Value = trainee.CellNbr;
+                    cmd.Parameters.Add("@Gender", SqlDbType.VarChar).Value = trainee.Gender;
+                    cmd.Parameters.Add("@Age", SqlDbType.Int).Value = trainee.Age;
+                    return cmd.ExecuteNonQuery();
+                }
+            }
         }
+
 
         // this method returns List of Trainee
         public List<TraineeViewModel> GetAllTrainees()

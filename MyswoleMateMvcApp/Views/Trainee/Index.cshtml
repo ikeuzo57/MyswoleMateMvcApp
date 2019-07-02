@@ -41,6 +41,7 @@
                     <h1>Personalized 5-STEP Workout Plan</h1>
                     <p>Create personalized 5-Step Workout Plans for all of your Trainees and assign them to your Trainees! MySwoleMate is is the only app you will need to get your trainees SWOLE.</p>
                     <p>
+
                         <a href="~/Workout.aspx" class="btn btn-lg btn-success">Create a Workout</a>
                     </p>
                 </div>
@@ -70,7 +71,8 @@
                 </div>
                 <div class="col-xs-8 col-xs-offset-2 text-center">
                     <br />
-                    <a href="~/Trainees.aspx" runat="server" class="btn btn-lg btn-outline">Go To Trainees List</a>
+                    @Html.ActionLink("Go To Trainee List", "TraineeList", "Home", new { area = "" }, new { @class = "btn btn-lg btn-success" })
+                  
                 </div>
             </div>
         </div>
