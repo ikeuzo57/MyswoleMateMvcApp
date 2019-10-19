@@ -127,11 +127,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\TraineeController.cs" />
+    <Compile Include="Controllers\WorkoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Trainee.cs" />
     <Compile Include="Models\TraineeViewModel.cs" />
+    <Compile Include="Models\WorkoutViewModel.cs" />
     <Compile Include="MySwoleMateDAL\TraineeDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -177,6 +179,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\Workout\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
